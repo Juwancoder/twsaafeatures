@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>توسع</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        .swiper-pagination-custom {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .swiper-pagination-custom .swiper-pagination-bullet {
+            width: 10px;
+            height: 10px;
+            background: rgba(255, 255, 255, .35);
+            opacity: 1;
+            transition: .3s;
+        }
+
+        .swiper-pagination-custom .swiper-pagination-bullet-active {
+            width: 28px;
+            border-radius: 999px;
+            background: #fff;
+        }
+    </style>
+
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+        }
+
+        .primary {
+            color: #010658;
+        }
+
+        .bg-primary {
+            background: #010658;
+        }
+
+        .bg-secondary {
+            background: #B1C8D8;
+        }
+
+        .bg-page {
+            background: #F2F2F2;
+        }
+    </style>
+</head>
+
+<body class="bg-page">
+
+    <!-- Header -->
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="flex items-center justify-between h-20">
+
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <img src="https://twsaa.com/images/new_frontend/new-logo.png" class="h-12 md:h-14" alt="">
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden lg:flex items-center gap-8">
+                    <a href="#" class="font-semibold text-gray-700 hover:text-[#010658]">الرئيسية</a>
+                    <a href="#" class="font-semibold text-gray-700 hover:text-[#010658]">الخدمات</a>
+                    <a href="#" class="font-semibold text-gray-700 hover:text-[#010658]">قنوات البيع</a>
+                    <a href="#" class="font-semibold text-gray-700 hover:text-[#010658]">الباقات</a>
+                    <a href="#" class="font-semibold text-gray-700 hover:text-[#010658]">التواصل</a>
+                </nav>
+
+                <!-- Desktop Buttons -->
+                <div class="hidden lg:flex items-center gap-3">
+
+                    <a href="#"
+                        class="px-5 py-3 rounded-xl bg-gray-100 text-[#010658] font-bold hover:bg-gray-200 transition">
+                        تسجيل الدخول
+                    </a>
+
+                    <a href="#"
+                        class="px-5 py-3 rounded-xl bg-[#010658] text-white font-bold hover:opacity-90 transition">
+                        ابدأ مجاناً
+                    </a>
+
+                </div>
+
+                <!-- Mobile Button -->
+                <button id="menuBtn"
+                    class="lg:hidden flex items-center justify-center w-11 h-11 rounded-xl bg-gray-100">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor"
+                        stroke-width="2" viewBox="0 0 24 24">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-white border-t border-gray-100">
+
+            <div class="p-5 flex flex-col gap-4">
+
+                <a href="#" class="font-semibold">الرئيسية</a>
+                <a href="#" class="font-semibold">الخدمات</a>
+                <a href="#" class="font-semibold">قنوات البيع</a>
+                <a href="#" class="font-semibold">الباقات</a>
+                <a href="#" class="font-semibold">التواصل</a>
+
+                <div class="flex flex-col gap-3 mt-4">
+
+                    <a href="#" class="w-full text-center px-5 py-3 rounded-xl bg-gray-100 text-[#010658] font-bold">
+                        تسجيل الدخول
+                    </a>
+
+                    <a href="#" class="w-full text-center px-5 py-3 rounded-xl bg-[#010658] text-white font-bold">
+                        ابدأ مجاناً
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- Hero -->
+    <section class="py-12 md:py-20">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+
+                <!-- Content -->
+                <div class="text-center lg:text-right">
+
+                    <h1 class="text-4xl md:text-5xl xl:text-6xl font-extrabold leading-tight text-[#010658]">
+
+                        شغّل متجرك ووسّع مبيعاتك
+                        <br>
+                        بالذكاء الاصطناعي
+
+                    </h1>
+
+                    <p class="mt-6 text-lg md:text-xl leading-9 text-gray-600">
+
+                        منصة واحدة تجمع التسويق، المحتوى،
+                        خدمة العملاء، التحليلات، المخزون
+                        والتحويلات لتساعدك على النمو
+                        بشكل أسرع وبتكلفة أقل.
+
+                    </p>
+
+                    <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+
+                        <a href="#" class="px-8 py-4 rounded-2xl bg-[#010658] text-white font-bold text-center">
+
+                            ابدأ الآن
+
+                        </a>
+
+                        <a href="#" class="px-8 py-4 rounded-2xl bg-white border border-gray-200 font-bold text-center">
+
+                            الأسعار
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Dashboard -->
+                <div>
+
+                    <div class="bg-white rounded-[30px] p-5 md:p-8 shadow-[0_20px_60px_rgba(1,6,88,0.08)]">
+
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+
+                            <div class="bg-gray-50 rounded-2xl p-5">
+
+                                <p class="text-gray-500 text-sm">
+                                    المبيعات
+                                </p>
+
+                                <h3 class="text-2xl md:text-3xl font-extrabold text-[#010658] mt-2">
+                                    +128%
+                                </h3>
+
+                            </div>
+
+                            <div class="bg-gray-50 rounded-2xl p-5">
+
+                                <p class="text-gray-500 text-sm">
+                                    العملاء
+                                </p>
+
+                                <h3 class="text-2xl md:text-3xl font-extrabold text-[#010658] mt-2">
+                                    3,520
+                                </h3>
+
+                            </div>
+
+                            <div class="bg-gray-50 rounded-2xl p-5">
+
+                                <p class="text-gray-500 text-sm">
+                                    الحملات
+                                </p>
+
+                                <h3 class="text-2xl md:text-3xl font-extrabold text-[#010658] mt-2">
+                                    42
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+                        <div
+                            class="h-56 md:h-72 rounded-[24px] mt-5 bg-gradient-to-b from-[#010658] to-[#2533c7] relative overflow-hidden">
+
+                            <div class="absolute bottom-0 left-0 right-0 h-40 bg-white/20"
+                                style="clip-path: polygon(0% 100%, 10% 70%, 20% 80%, 35% 35%, 50% 60%, 65% 20%, 80% 40%, 100% 0%, 100% 100%);">
+                            </div>
+
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-4 mt-5">
+
+                            <div class="bg-[#eef3f7] rounded-2xl p-5">
+
+                                <h4 class="font-extrabold text-[#010658]">
+                                    المحتوى
+                                </h4>
+
+                                <p class="text-gray-600 mt-2">
+                                    132 منشور تم إنشاؤه بالذكاء الاصطناعي
+                                </p>
+
+                            </div>
+
+                            <div class="bg-[#eef3f7] rounded-2xl p-5">
+
+                                <h4 class="font-extrabold text-[#010658]">
+                                    AI Assistant
+                                </h4>
+
+                                <p class="text-gray-600 mt-2">
+                                    إنشاء محتوى وتحليل الأداء بشكل فوري
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+    <!-- Section 2 -->
+    <section class="py-20 bg-white">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Heading -->
+            <div class="text-center max-w-3xl mx-auto">
+
+                <h2 class="text-4xl md:text-5xl font-extrabold text-[#010658]">
+                    ليش التوسع صار أصعب من قبل؟
+                </h2>
+
+                <p class="mt-5 text-lg text-gray-600 leading-8">
+                    التاجر اليوم يتنقل بين عشرات الأدوات والمنصات يومياً لإنجاز مهام بسيطة.
+                </p>
+
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-16 items-center mt-16">
+
+                <!-- Problems -->
+                <div class="space-y-4">
+
+                    <div
+                        class="flex items-center gap-4 bg-[#F2F2F2] rounded-2xl p-5 hover:translate-x-[-4px] transition">
+
+                        <div
+                            class="w-14 h-14 rounded-xl bg-[#B1C8D8] flex items-center justify-center text-[#010658] text-2xl">
+                            🧩
+                        </div>
+
+                        <span class="font-bold text-lg">
+                            أدوات كثيرة
+                        </span>
+
+                    </div>
+
+                    <div class="flex items-center gap-4 bg-[#F2F2F2] rounded-2xl p-5">
+
+                        <div class="w-14 h-14 rounded-xl bg-[#B1C8D8] flex items-center justify-center text-2xl">
+                            📱
+                        </div>
+
+                        <span class="font-bold text-lg">
+                            حسابات سوشال متعددة
+                        </span>
+
+                    </div>
+
+                    <div class="flex items-center gap-4 bg-[#F2F2F2] rounded-2xl p-5">
+
+                        <div class="w-14 h-14 rounded-xl bg-[#B1C8D8] flex items-center justify-center text-2xl">
+                            ✍️
+                        </div>
+
+                        <span class="font-bold text-lg">
+                            محتوى يحتاج وقت
+                        </span>
+
+                    </div>
+
+                    <div class="flex items-center gap-4 bg-[#F2F2F2] rounded-2xl p-5">
+
+                        <div class="w-14 h-14 rounded-xl bg-[#B1C8D8] flex items-center justify-center text-2xl">
+                            🎧
+                        </div>
+
+                        <span class="font-bold text-lg">
+                            خدمة عملاء مستمرة
+                        </span>
+
+                    </div>
+
+                    <div class="flex items-center gap-4 bg-[#F2F2F2] rounded-2xl p-5">
+
+                        <div class="w-14 h-14 rounded-xl bg-[#B1C8D8] flex items-center justify-center text-2xl">
+                            📊
+                        </div>
+
+                        <span class="font-bold text-lg">
+                            تقارير متفرقة
+                        </span>
+
+                    </div>
+
+                    <div class="flex items-center gap-4 bg-[#F2F2F2] rounded-2xl p-5">
+
+                        <div class="w-14 h-14 rounded-xl bg-[#B1C8D8] flex items-center justify-center text-2xl">
+                            💸
+                        </div>
+
+                        <span class="font-bold text-lg">
+                            تكاليف تشغيل مرتفعة
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <!-- Visual -->
+                <div class="relative h-[420px] flex items-center justify-center">
+
+                    <!-- Center -->
+                    <div class="w-48 h-48 bg-[#010658] rounded-[32px] flex items-center justify-center shadow-2xl z-10">
+
+                        <img src="https://twsaa.com/images/new_frontend/new-logo.png" class="w-28 brightness-0 invert">
+
+                    </div>
+
+                    <!-- Top -->
+                    <div
+                        class="absolute top-0 bg-white w-24 h-24 rounded-3xl shadow-lg flex items-center justify-center text-4xl">
+                        📣
+                    </div>
+
+                    <!-- Right -->
+                    <div
+                        class="absolute right-0 top-1/2 -translate-y-1/2 bg-white w-24 h-24 rounded-3xl shadow-lg flex items-center justify-center text-4xl">
+                        📦
+                    </div>
+
+                    <!-- Left -->
+                    <div
+                        class="absolute left-0 top-1/2 -translate-y-1/2 bg-white w-24 h-24 rounded-3xl shadow-lg flex items-center justify-center text-4xl">
+                        📈
+                    </div>
+
+                    <!-- Bottom Left -->
+                    <div
+                        class="absolute bottom-6 left-16 bg-white w-24 h-24 rounded-3xl shadow-lg flex items-center justify-center text-4xl">
+                        🤖
+                    </div>
+
+                    <!-- Bottom Right -->
+                    <div
+                        class="absolute bottom-6 right-16 bg-white w-24 h-24 rounded-3xl shadow-lg flex items-center justify-center text-4xl">
+                        💬
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Solution -->
+            <div class="mt-20 bg-gradient-to-l from-[#010658] to-[#010658] rounded-[32px] p-6 text-center">
+
+                <h3 class="text-3xl md:text-xl font-extrabold text-white">
+
+                    توسع جمعت كل هذا في مكان واحد.
+
+                </h3>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Section -->
+    <section class="py-24 bg-[#fff] overflow-hidden">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+
+                <!-- Content -->
+                <div>
+
+                    <span class="inline-flex px-4 py-2 rounded-full bg-[#B1C8D8]/40 text-[#010658] font-semibold mb-5">
+
+                        منصة موحدة
+
+                    </span>
+
+                    <h2 class="text-4xl md:text-5xl xl:text-6xl font-extrabold text-[#010658] leading-tight">
+
+                        كل شيء في مكان واحد
+
+                    </h2>
+
+                    <p class="mt-6 text-lg text-gray-600 leading-9">
+
+                        توسع تجمع التسويق والمحتوى وخدمة العملاء
+                        والذكاء الاصطناعي والمخزون والتحليلات
+                        والتحويلات داخل لوحة تحكم واحدة.
+
+                    </p>
+
+                </div>
+
+                <!-- Image -->
+                <div>
+                    <img src="https://i.imgur.com/NWWPZes.png" alt="Twsaa Platform" class="w-full">
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+    <!-- Section 3 -->
+    <section class="py-24 bg-white overflow-hidden">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+                <!-- Content -->
+                <div>
+
+                    <span class="inline-flex px-4 py-2 rounded-full bg-[#B1C8D8]/40 text-[#010658] font-semibold mb-5">
+
+                        منصة موحدة لإدارة متجرك
+
+                    </span>
+
+                    <h2 class="text-4xl md:text-5xl xl:text-6xl font-extrabold text-[#010658] leading-tight">
+
+                        كل ما تحتاجه في لوحة واحدة
+
+                    </h2>
+
+                    <p class="mt-6 text-lg text-gray-600 leading-9">
+
+                        إدارة متجرك بالكامل من مكان واحد،
+                        بدون التنقل بين عشرات الأدوات والمنصات.
+
+                    </p>
+
+
+                </div>
+
+                <!-- Visual -->
+                <div class="relative">
+
+                    <!-- Floating Cards -->
+
+
+
+                    <!-- Main Dashboard -->
+
+                    <div class="bg-gradient-to-br from-[#010658] to-[#010658] rounded-[32px] p-6 md:p-8 shadow-2xl">
+
+                        <!-- Stats -->
+
+                        <div class="grid grid-cols-3 gap-4">
+
+                            <div class="bg-white rounded-2xl p-4 text-center">
+
+                                <p class="text-gray-500 text-sm">
+                                    المنتجات
+                                </p>
+
+                                <h4 class="text-[#010658] font-extrabold text-2xl mt-2">
+                                    245
+                                </h4>
+
+                            </div>
+
+                            <div class="bg-white rounded-2xl p-4 text-center">
+
+                                <p class="text-gray-500 text-sm">
+                                    الطلبات
+                                </p>
+
+                                <h4 class="text-[#010658] font-extrabold text-2xl mt-2">
+                                    1.2K
+                                </h4>
+
+                            </div>
+
+                            <div class="bg-white rounded-2xl p-4 text-center">
+
+                                <p class="text-gray-500 text-sm">
+                                    العملاء
+                                </p>
+
+                                <h4 class="text-[#010658] font-extrabold text-2xl mt-2">
+                                    3.8K
+                                </h4>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Chart -->
+
+                        <div class="mt-5 bg-white rounded-3xl p-6">
+
+                            <div class="flex justify-between mb-5">
+
+                                <h4 class="font-bold">
+                                    أداء المتجر
+                                </h4>
+
+                                <span class="text-green-500 font-bold">
+                                    +28%
+                                </span>
+
+                            </div>
+
+                            <div
+                                class="h-44 rounded-2xl bg-gradient-to-t from-[#B1C8D8] to-[#F2F2F2] relative overflow-hidden">
+
+                                <div class="absolute bottom-0 left-0 right-0 h-28 bg-[#010658]/20"
+                                    style="clip-path: polygon(0% 100%, 15% 60%, 30% 75%, 45% 30%, 60% 50%, 75% 15%, 100% 0%, 100% 100%);">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+    <!-- Section 4 -->
+    <section class="py-24 bg-[#F2F2F2] overflow-hidden">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+                <!-- Content -->
+                <div>
+
+                    <span class="inline-flex px-4 py-2 rounded-full bg-[#B1C8D8]/40 text-[#010658] font-semibold mb-5">
+
+                        الذكاء الاصطناعي
+
+                    </span>
+
+                    <h2 class="text-4xl md:text-5xl xl:text-6xl font-extrabold text-[#010658] leading-tight">
+
+                        أنشئ محتوى تسويقي
+                        <br>
+                        جاهز خلال دقائق
+
+                    </h2>
+
+                    <p class="mt-6 text-lg text-gray-600 leading-9">
+
+                        أنشئ محتوى متكامل لمتجرك بضغطة واحدة،
+                        من الأفكار وحتى النصوص الجاهزة للنشر.
+
+                    </p>
+
+
+                </div>
+
+                <!-- Image -->
+                <div class="relative">
+
+                    <img src="https://i.imgur.com/yE3khBu.png" alt="AI Content" class="w-full max-w-[350px] mx-auto">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+    <!-- Section 5 -->
+    <section class="py-24 bg-white overflow-hidden">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+                <!-- Image -->
+                <div>
+                    <img src="https://i.imgur.com/42eDwyG.png" alt="Campaign Analytics"
+                        class="w-full max-w-[750px] mx-auto">
+                </div>
+
+                <!-- Content -->
+                <div>
+
+                    <span class="inline-flex px-4 py-2 rounded-full bg-[#B1C8D8]/40 text-[#010658] font-semibold mb-5">
+
+                        إدارة الحملات
+
+                    </span>
+
+                    <h2 class="text-4xl md:text-5xl xl:text-6xl font-extrabold text-[#010658] leading-tight">
+
+                        اعرف أي حملة
+                        <br>
+                        تحقق النتائج
+
+                    </h2>
+
+                    <p class="mt-8 text-xl text-gray-600 leading-10 max-w-xl">
+
+                        تابع أداء حملاتك التسويقية من لوحة واحدة،
+                        واتخذ قرارات أسرع بناءً على البيانات الفعلية.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Section 6 -->
+    <section class="py-24 bg-[#F2F2F2] overflow-hidden">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+                <!-- Content -->
+                <div>
+
+                    <span class="inline-flex px-4 py-2 rounded-full bg-[#B1C8D8]/40 text-[#010658] font-semibold mb-5">
+
+                        خدمة العملاء
+
+                    </span>
+
+                    <h2 class="text-4xl md:text-5xl xl:text-6xl font-extrabold text-[#010658] leading-tight">
+
+                        خدمة عملاء
+                        <br>
+                        بالذكاء الاصطناعي
+
+                    </h2>
+
+                    <p class="mt-8 text-xl text-gray-600 leading-10 max-w-xl">
+
+                        وفّر الوقت على فريقك واستجب للعملاء بشكل أسرع
+                        عبر مساعد ذكي يعمل على مدار الساعة.
+
+                    </p>
+
+                    <!-- Features -->
+
+                    <div class="grid sm:grid-cols-2 gap-4 mt-10">
+
+                        <div class="bg-white rounded-2xl p-5 shadow-sm flex items-center gap-4">
+
+                            <div class="w-12 h-12 rounded-xl bg-[#B1C8D8]/40 flex items-center justify-center">
+
+                                <i class="fa-regular fa-comments text-[#010658]"></i>
+
+                            </div>
+
+                            <span class="font-medium">
+                                الرد على الاستفسارات
+                            </span>
+
+                        </div>
+
+                        <div class="bg-white rounded-2xl p-5 shadow-sm flex items-center gap-4">
+
+                            <div class="w-12 h-12 rounded-xl bg-[#B1C8D8]/40 flex items-center justify-center">
+
+                                <i class="fa-solid fa-truck-fast text-[#010658]"></i>
+
+                            </div>
+
+                            <span class="font-medium">
+                                متابعة الطلبات
+                            </span>
+
+                        </div>
+
+                        <div class="bg-white rounded-2xl p-5 shadow-sm flex items-center gap-4">
+
+                            <div class="w-12 h-12 rounded-xl bg-[#B1C8D8]/40 flex items-center justify-center">
+
+                                <i class="fa-regular fa-circle-question text-[#010658]"></i>
+
+                            </div>
+
+                            <span class="font-medium">
+                                الإجابة على الأسئلة المتكررة
+                            </span>
+
+                        </div>
+
+                        <div class="bg-white rounded-2xl p-5 shadow-sm flex items-center gap-4">
+
+                            <div class="w-12 h-12 rounded-xl bg-[#B1C8D8]/40 flex items-center justify-center">
+
+                                <i class="fa-solid fa-headset text-[#010658]"></i>
+
+                            </div>
+
+                            <span class="font-medium">
+                                تقليل ضغط فريق الدعم
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Image -->
+
+                <div>
+
+                    <img src="https://cdn.twsaa.com/home/23/347dba44-aafb-4803-a744-4684f9f07f24.png" alt="AI Support"
+                        class="w-full max-w-[850px] mx-auto">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+    <section class="py-12 lg:py-24 bg-white overflow-hidden" dir="rtl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+                <div>
+                    <span
+                        class="inline-flex px-4 py-2 rounded-full bg-[#B1C8D8]/40 text-[#010658] text-sm md:text-base font-semibold mb-4 md:mb-5">
+                        الذكاء الاصطناعي
+                    </span>
+                    <h2
+                        class="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-extrabold text-[#010658] leading-snug md:leading-tight">
+                        ذكاء اصطناعي يفهم نشاطك <br class="hidden sm:block"> ويقترح لك الخطوة القادمة
+                    </h2>
+                    <p class="mt-4 md:mt-8 text-lg md:text-xl text-gray-600 leading-relaxed md:leading-10">
+                        مو بس أداة لإدارة متجرك، توسع تساعدك على اكتشاف فرص النمو وتحسين التسويق وزيادة ظهور متجرك من
+                        خلال اقتراحات ذكية مخصصة لنشاطك.
+                    </p>
+                    <div class="space-y-3 md:space-y-4 mt-8 md:mt-10">
+                        <div class="flex items-start md:items-center gap-3">
+                            <span class="mt-1 md:mt-0">✅</span>
+                            <span class="text-sm md:text-base">اقتراح أفكار تسويقية حسب مجال متجرك</span>
+                        </div>
+                        <div class="flex items-start md:items-center gap-3">
+                            <span class="mt-1 md:mt-0">✅</span>
+                            <span class="text-sm md:text-base">توصيات ذكية لزيادة الوصول والتفاعل</span>
+                        </div>
+                        <div class="flex items-start md:items-center gap-3">
+                            <span class="mt-1 md:mt-0">✅</span>
+                            <span class="text-sm md:text-base">دعم التسويق وتطوير أداء المتجر</span>
+                        </div>
+                        <div class="flex items-start md:items-center gap-3">
+                            <span class="mt-1 md:mt-0">✅</span>
+                            <span class="text-sm md:text-base">اقتراح محتوى وحملات مناسبة لنشاطك</span>
+                        </div>
+                        <div class="flex items-start md:items-center gap-3">
+                            <span class="mt-1 md:mt-0">✅</span>
+                            <span class="text-sm md:text-base">تحسين ظهور المتجر على منصات التواصل</span>
+                        </div>
+                        <div class="flex items-start md:items-center gap-3">
+                            <span class="mt-1 md:mt-0">✅</span>
+                            <span class="text-sm md:text-base">الاستفادة من الذكاء الاصطناعي لاتخاذ قرارات أفضل</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full">
+                    <div
+                        class="bg-gradient-to-br from-[#010658] to-[#010658] rounded-[24px] md:rounded-[36px] p-5 md:p-6 shadow-[0_15px_40px_rgba(1,6,88,.15)] md:shadow-[0_25px_80px_rgba(1,6,88,.25)]">
+
+                        <div class="flex items-center justify-between mb-5 md:mb-6">
+                            <div>
+                                <h3 class="text-white text-lg md:text-xl font-bold"> AI Growth Assistant </h3>
+                                <p class="text-blue-100 text-xs md:text-sm mt-1"> توصيات ذكية مخصصة لمتجرك </p>
+                            </div>
+                            <div
+                                class="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-white/15 flex items-center justify-center text-white text-lg md:text-xl shrink-0">
+                                ✨
+                            </div>
+                        </div>
+
+                        <div class="swiper aiSwiper">
+                            <div class="swiper-wrapper">
+
+                                <div class="swiper-slide">
+                                    <div class="bg-white rounded-[20px] md:rounded-[28px] p-5 md:p-6">
+                                        <div
+                                            class="inline-flex px-3 py-1.5 md:py-2 rounded-full bg-pink-100 text-pink-600 text-xs md:text-sm font-semibold">
+                                            💄 متجر مستحضرات تجميل
+                                        </div>
+                                        <h4
+                                            class="text-lg sm:text-xl md:text-2xl font-bold text-[#010658] mt-4 md:mt-5">
+                                            حملة الصيف القادمة
+                                        </h4>
+                                        <p
+                                            class="text-gray-600 text-sm md:text-base mt-3 md:mt-4 leading-relaxed md:leading-8">
+                                            اقترح الذكاء الاصطناعي حملة لمستحضرات العناية الصيفية مع محتوى يومي لمدة
+                                            أسبوع.
+                                        </p>
+                                        <div class="grid grid-cols-2 gap-3 md:gap-4 mt-5 md:mt-6">
+                                            <div class="bg-[#F2F2F2] rounded-xl md:rounded-2xl p-3 md:p-4">
+                                                <span class="text-gray-500 text-xs md:text-sm"> زيادة الوصول </span>
+                                                <div class="font-bold text-[#010658] text-xl md:text-2xl mt-1 md:mt-2">
+                                                    +41% </div>
+                                            </div>
+                                            <div class="bg-[#F2F2F2] rounded-xl md:rounded-2xl p-3 md:p-4">
+                                                <span class="text-gray-500 text-xs md:text-sm"> التفاعل المتوقع </span>
+                                                <div class="font-bold text-[#010658] text-xl md:text-2xl mt-1 md:mt-2">
+                                                    +29% </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="bg-white rounded-[20px] md:rounded-[28px] p-5 md:p-6">
+                                        <div
+                                            class="inline-flex px-3 py-1.5 md:py-2 rounded-full bg-amber-100 text-amber-700 text-xs md:text-sm font-semibold">
+                                            ☕ متجر قهوة
+                                        </div>
+                                        <h4
+                                            class="text-lg sm:text-xl md:text-2xl font-bold text-[#010658] mt-4 md:mt-5">
+                                            عروض نهاية الأسبوع
+                                        </h4>
+                                        <p
+                                            class="text-gray-600 text-sm md:text-base mt-3 md:mt-4 leading-relaxed md:leading-8">
+                                            إنشاء حملة خصومات مع محتوى قصير للريلز يركز على تجربة القهوة اليومية.
+                                        </p>
+                                        <div class="grid grid-cols-2 gap-3 md:gap-4 mt-5 md:mt-6">
+                                            <div class="bg-[#F2F2F2] rounded-xl md:rounded-2xl p-3 md:p-4">
+                                                <span class="text-gray-500 text-xs md:text-sm"> الوصول </span>
+                                                <div class="font-bold text-[#010658] text-xl md:text-2xl mt-1 md:mt-2">
+                                                    +36% </div>
+                                            </div>
+                                            <div class="bg-[#F2F2F2] rounded-xl md:rounded-2xl p-3 md:p-4">
+                                                <span class="text-gray-500 text-xs md:text-sm"> المبيعات </span>
+                                                <div class="font-bold text-[#010658] text-xl md:text-2xl mt-1 md:mt-2">
+                                                    +18% </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="bg-white rounded-[20px] md:rounded-[28px] p-5 md:p-6">
+                                        <div
+                                            class="inline-flex px-3 py-1.5 md:py-2 rounded-full bg-violet-100 text-violet-700 text-xs md:text-sm font-semibold">
+                                            🌸 متجر عطور
+                                        </div>
+                                        <h4
+                                            class="text-lg sm:text-xl md:text-2xl font-bold text-[#010658] mt-4 md:mt-5">
+                                            حملة تفاعل جديدة
+                                        </h4>
+                                        <p
+                                            class="text-gray-600 text-sm md:text-base mt-3 md:mt-4 leading-relaxed md:leading-8">
+                                            اقترح الذكاء الاصطناعي محتوى وتجارب عطور لرفع التفاعل والمبيعات.
+                                        </p>
+                                        <div class="grid grid-cols-2 gap-3 md:gap-4 mt-5 md:mt-6">
+                                            <div class="bg-[#F2F2F2] rounded-xl md:rounded-2xl p-3 md:p-4">
+                                                <span class="text-gray-500 text-xs md:text-sm"> التفاعل </span>
+                                                <div class="font-bold text-[#010658] text-xl md:text-2xl mt-1 md:mt-2">
+                                                    +52% </div>
+                                            </div>
+                                            <div class="bg-[#F2F2F2] rounded-xl md:rounded-2xl p-3 md:p-4">
+                                                <span class="text-gray-500 text-xs md:text-sm"> المبيعات </span>
+                                                <div class="font-bold text-[#010658] text-xl md:text-2xl mt-1 md:mt-2">
+                                                    +24% </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="swiper-pagination-custom !mt-5 md:!mt-6"> </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+    <!-- Section 7 -->
+    <section class="py-24 bg-white overflow-hidden">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+
+                <!-- Visual -->
+
+                <!-- Visual -->
+
+                <div>
+
+                    <img src="https://cdn.twsaa.com/home/23/fb246bfb-b508-4419-955f-20198bb62d81.png" alt="مخازن"
+                        class="w-full max-w-[1000px] mx-auto rounded-3xl">
+
+                </div>
+                <!-- Content -->
+
+                <div>
+
+                    <span class="inline-flex px-4 py-2 rounded-full bg-[#B1C8D8]/40 text-[#010658] font-semibold mb-5">
+
+                        الربط مع مخازن
+
+                    </span>
+
+                    <h2 class="text-4xl md:text-5xl xl:text-6xl
+                    font-extrabold
+                    text-[#010658]
+                    leading-tight">
+
+                        ابدأ البيع
+                        <br>
+                        بدون شراء مخزون
+
+                    </h2>
+
+                    <p class="mt-8 text-lg md:text-xl text-gray-600 leading-10">
+
+                        ابدأ متجرك مباشرة عبر الربط مع مخازن،
+                        واعرض آلاف المنتجات الجاهزة للبيع
+                        بدون الحاجة للتخزين أو شراء كميات مسبقاً.
+
+                    </p>
+
+                    <div class="grid sm:grid-cols-2 gap-4 mt-10">
+
+                        <div class="bg-[#F2F2F2] rounded-2xl p-5">
+
+                            <div class="text-2xl mb-3">
+                                🔗
+                            </div>
+
+                            <div class="font-semibold">
+                                الربط مع مخازن
+                            </div>
+
+                        </div>
+
+                        <div class="bg-[#F2F2F2] rounded-2xl p-5">
+
+                            <div class="text-2xl mb-3">
+                                📦
+                            </div>
+
+                            <div class="font-semibold">
+                                منتجات جاهزة للبيع
+                            </div>
+
+                        </div>
+
+                        <div class="bg-[#F2F2F2] rounded-2xl p-5">
+
+                            <div class="text-2xl mb-3">
+                                🏪
+                            </div>
+
+                            <div class="font-semibold">
+                                بدون تخزين
+                            </div>
+
+                        </div>
+
+                        <div class="bg-[#F2F2F2] rounded-2xl p-5">
+
+                            <div class="text-2xl mb-3">
+                                💰
+                            </div>
+
+                            <div class="font-semibold">
+                                بدون رأس مال كبير
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <section class="py-24 bg-[#F8FAFC] overflow-hidden" dir="rtl">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+                <div>
+                    <span class="inline-flex px-4 py-2 rounded-full bg-[#B1C8D8]/40 text-[#010658] font-semibold mb-5">
+                        إدارة المنتجات
+                    </span>
+                    <h2 class="text-4xl md:text-5xl xl:text-6xl font-extrabold text-[#010658] leading-tight">
+                        تحكم كامل
+                        <br>
+                        بمنتجاتك
+                    </h2>
+                    <p class="mt-8 text-lg text-gray-600 leading-9">
+                        أضف منتجاتك ونظمها وتابع المخزون
+                        واربط متجرك مع الموردين والمخازن
+                        من لوحة تحكم واحدة.
+                    </p>
+                </div>
+
+                <div class="w-full overflow-hidden">
+                    <div class="swiper productsSwiper pb-12">
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide h-auto">
+                                <div
+                                    class="bg-white rounded-[28px] p-8 shadow-sm border border-slate-100 h-full transition-transform hover:-translate-y-1 duration-300">
+                                    <div
+                                        class="w-16 h-16 rounded-2xl bg-[#EEF4FF] flex items-center justify-center text-3xl mb-6">
+                                        ➕
+                                    </div>
+                                    <h3 class="text-2xl font-bold text-[#010658] mb-4">إضافة المنتجات</h3>
+                                    <p class="text-gray-600 leading-8">
+                                        أضف المنتجات خلال ثوانٍ مع الصور والأسعار والتفاصيل.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide h-auto">
+                                <div
+                                    class="bg-white rounded-[28px] p-8 shadow-sm border border-slate-100 h-full transition-transform hover:-translate-y-1 duration-300">
+                                    <div
+                                        class="w-16 h-16 rounded-2xl bg-[#EEF4FF] flex items-center justify-center text-3xl mb-6">
+                                        📂
+                                    </div>
+                                    <h3 class="text-2xl font-bold text-[#010658] mb-4">تنظيم المنتجات</h3>
+                                    <p class="text-gray-600 leading-8">
+                                        قسم المنتجات لفئات مرتبة وسهلة الإدارة.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide h-auto">
+                                <div
+                                    class="bg-white rounded-[28px] p-8 shadow-sm border border-slate-100 h-full transition-transform hover:-translate-y-1 duration-300">
+                                    <div
+                                        class="w-16 h-16 rounded-2xl bg-[#EEF4FF] flex items-center justify-center text-3xl mb-6">
+                                        📦
+                                    </div>
+                                    <h3 class="text-2xl font-bold text-[#010658] mb-4">متابعة المخزون</h3>
+                                    <p class="text-gray-600 leading-8">
+                                        راقب الكميات المتوفرة والتنبيهات بشكل فوري.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide h-auto">
+                                <div
+                                    class="bg-white rounded-[28px] p-8 shadow-sm border border-slate-100 h-full transition-transform hover:-translate-y-1 duration-300">
+                                    <div
+                                        class="w-16 h-16 rounded-2xl bg-[#EEF4FF] flex items-center justify-center text-3xl mb-6">
+                                        🔗
+                                    </div>
+                                    <h3 class="text-2xl font-bold text-[#010658] mb-4">الموردين والمخازن</h3>
+                                    <p class="text-gray-600 leading-8">
+                                        ربط مباشر مع الموردين ومنصات المخزون المختلفة.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="swiper-pagination !bottom-0"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            new Swiper(".productsSwiper", {
+                spaceBetween: 24,
+                grabCursor: true, // يغير شكل الماوس ليظهر أنه قابل للسحب
+                loop: true,       // يجعله يدور في حلقة مستمرة
+                autoplay: {
+                    delay: 3000,  // يتحرك كل 3 ثواني
+                    disableOnInteraction: false, // يستمر بالحركة حتى بعد النقر
+                },
+                pagination: {
+                    el: ".productsSwiper .swiper-pagination",
+                    clickable: true,
+                },
+                breakpoints: {
+                    // شاشات الجوال
+                    0: {
+                        slidesPerView: 1.1,
+                    },
+                    // الشاشات المتوسطة (التابلت)
+                    640: {
+                        slidesPerView: 1.5,
+                    },
+                    // شاشات الكمبيوتر
+                    1024: {
+                        slidesPerView: 2,
+                    }
+                }
+            });
+        });
+    </script>
+
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script> new Swiper('.aiSwiper', {
+
+            loop: true,
+
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+
+            speed: 800,
+
+            pagination: {
+                el: '.swiper-pagination-custom',
+                clickable: true,
+            }
+
+        });
+    </script>
+
+    <script>
+        const btn = document.getElementById('menuBtn');
+        const menu = document.getElementById('mobileMenu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+
+</html>
