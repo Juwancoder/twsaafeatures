@@ -39,6 +39,220 @@
         }
     </style>
 
+
+    <style>
+        :root {
+            --bg-navy: #010658;
+            --text-secondary: #B1C8D8;
+            --card-bg: #ffffff;
+            --accent-blue: #E8F0FE;
+            --accent-blue-text: #1A73E8;
+            --text-main: #0a1128;
+            --divider: #f1f3f5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .twsaa-section {
+            padding: 120px 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .twsaa-header {
+            text-align: center;
+            max-width: 800px;
+            margin-bottom: 80px;
+            padding: 0 20px;
+        }
+
+        .twsaa-badge {
+            display: inline-block;
+            background: rgba(177, 200, 216, 0.1);
+            color: var(--text-secondary);
+            padding: 8px 16px;
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-bottom: 24px;
+            border: 1px solid rgba(177, 200, 216, 0.2);
+        }
+
+        .twsaa-title {
+            font-size: clamp(36px, 5vw, 56px);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            background: linear-gradient(180deg, #FFFFFF 0%, #B1C8D8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .twsaa-subtitle {
+            font-size: 18px;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+
+        /* Carousel Styles */
+        .carousel-container {
+            width: 100%;
+            position: relative;
+            cursor: grab;
+            padding: 20px 0 60px 0;
+            /* Extra bottom padding for shadows */
+        }
+
+        .carousel-container:active {
+            cursor: grabbing;
+        }
+
+        .carousel-track {
+            display: flex;
+            gap: 32px;
+            padding: 0 40px;
+            width: max-content;
+            will-change: transform;
+        }
+
+        /* Card Styles */
+        .twsaa-card {
+            background-color: var(--card-bg);
+            border-radius: 30px;
+            padding: 40px;
+            width: 380px;
+            /* Desktop width */
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            color: var(--text-main);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 1);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+            position: relative;
+        }
+
+        /* Playful Rotations */
+        .twsaa-card:nth-child(even) {
+            transform: rotate(1.5deg);
+        }
+
+        .twsaa-card:nth-child(odd) {
+            transform: rotate(-1.5deg);
+        }
+
+        /* Hover Effect */
+        .twsaa-card:hover {
+            transform: translateY(-15px) rotate(0deg) scale(1.02) !important;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+            z-index: 10;
+        }
+
+        .card-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--bg-navy);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin-bottom: 24px;
+            box-shadow: 0 8px 16px rgba(1, 6, 88, 0.15);
+        }
+
+        .card-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .card-divider {
+            height: 1px;
+            background-color: var(--divider);
+            margin: 24px 0;
+            width: 100%;
+        }
+
+        .comparison-label {
+            font-size: 13px;
+            font-weight: 700;
+            color: #868e96;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+
+        .features-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 32px;
+            flex-grow: 1;
+        }
+
+        .features-list li {
+            display: flex;
+            align-items: center;
+            font-size: 15px;
+            font-weight: 600;
+            color: #343a40;
+        }
+
+        .features-list li svg {
+            width: 20px;
+            height: 20px;
+            margin-left: 10px;
+            color: var(--accent-blue-text);
+        }
+
+        .savings-badge {
+            background-color: var(--accent-blue);
+            color: var(--accent-blue-text);
+            padding: 12px 20px;
+            border-radius: 100px;
+            font-size: 15px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: auto;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 1024px) {
+            .twsaa-card {
+                width: 320px;
+                /* ~2 cards on tablet */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .twsaa-card {
+                width: 80vw;
+                /* ~1.2 cards on mobile */
+                padding: 30px;
+            }
+
+            .twsaa-section {
+                padding: 80px 0;
+            }
+
+            .twsaa-header {
+                margin-bottom: 50px;
+            }
+        }
+    </style>
+
     <style>
         body {
             font-family: 'Tajawal', sans-serif;
@@ -1217,6 +1431,1141 @@
             </div>
         </div>
     </section>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Section 9 -->
+
+    <section class="py-24 bg-white overflow-hidden">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+                <!-- Widget -->
+
+                <div>
+
+                    <div
+                        class="bg-gradient-to-br from-[#010658] to-[#010658] rounded-[36px] p-6 shadow-[0_25px_70px_rgba(1,6,88,.18)]">
+
+                        <!-- Balance -->
+
+                        <div class="bg-white rounded-3xl p-6 mb-5">
+
+                            <div class="flex justify-between items-center">
+
+                                <div>
+
+                                    <p class="text-gray-500 text-sm">
+                                        الرصيد المتاح
+                                    </p>
+
+                                    <h2 class="text-4xl font-bold text-[#010658] mt-2">
+                                        12,480 ر.س
+                                    </h2>
+
+                                </div>
+
+                                <div
+                                    class="w-16 h-16 rounded-2xl bg-[#EEF4FF] flex items-center justify-center text-3xl">
+
+                                    💳
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Cards -->
+
+                        <div class="grid sm:grid-cols-3 gap-4">
+
+                            <div class="bg-white rounded-3xl p-5">
+
+                                <div class="text-4xl mb-4">
+                                    💸
+                                </div>
+
+                                <h4 class="font-bold text-[#010658]">
+
+                                    حوالة للتاجر
+
+                                </h4>
+
+                                <p class="text-gray-500 text-sm mt-2 leading-7">
+
+                                    تحويل الأرباح
+                                    مباشرة لحسابك.
+
+                                </p>
+
+                            </div>
+
+                            <div class="bg-white rounded-3xl p-5">
+
+                                <div class="text-4xl mb-4">
+                                    🚀
+                                </div>
+
+                                <h4 class="font-bold text-[#010658]">
+
+                                    3 حوالات أسبوعياً
+
+                                </h4>
+
+                                <p class="text-gray-500 text-sm mt-2 leading-7">
+
+                                    للمشتركين
+                                    في الباقة السنوية.
+
+                                </p>
+
+                            </div>
+
+                            <div class="bg-white rounded-3xl p-5">
+
+                                <div class="text-4xl mb-4">
+                                    🎁
+                                </div>
+
+                                <h4 class="font-bold text-[#010658]">
+
+                                    كاش باك
+
+                                </h4>
+
+                                <p class="text-gray-500 text-sm mt-2 leading-7">
+
+                                    استرجع جزءاً
+                                    من مدفوعاتك.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Content -->
+
+                <div>
+
+                    <span class="inline-flex px-4 py-2 rounded-full bg-[#B1C8D8]/40 text-[#010658] font-semibold mb-5">
+
+                        الحوالات والمزايا
+
+                    </span>
+
+                    <h2 class="text-4xl md:text-5xl xl:text-6xl font-extrabold text-[#010658] leading-tight">
+
+                        أرباحك ومزاياك
+                        <br>
+                        في مكان واحد
+
+                    </h2>
+
+                    <p class="mt-8 text-lg text-gray-600 leading-9">
+
+                        تابع أرباحك، حوّل مستحقاتك بسهولة،
+                        واستفد من مزايا حصرية مثل الكاش باك
+                        والحوالات الأسبوعية للمشتركين.
+
+                    </p>
+
+                    <div class="mt-10 grid sm:grid-cols-2 gap-4">
+
+                        <div class="bg-[#F7F8FC] rounded-2xl p-5">
+
+                            💸 تحويل الحوالات للتجار
+
+                        </div>
+
+                        <div class="bg-[#F7F8FC] rounded-2xl p-5">
+
+                            🚀 3 حوالات أسبوعياً
+
+                        </div>
+
+                        <div class="bg-[#F7F8FC] rounded-2xl p-5 sm:col-span-2">
+
+                            🎁 مزايا الكاش باك
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+    <section class="twsaa-section bg-gradient-to-br from-[#010658] to-[#010658]">
+        <div class="twsaa-header">
+            <div class="twsaa-badge">وفر أكثر ونمِّ متجرك بذكاء</div>
+            <h2 class="twsaa-title">أنجز أكثر... بتكلفة أقل.</h2>
+            <p class="twsaa-subtitle">
+                بدل توظيف فريق كامل، استفد من الذكاء الاصطناعي والأتمتة لتقليل التكاليف وزيادة كفاءة تشغيل متجرك. أدر
+                التسويق، المحتوى، وخدمة العملاء من منصة واحدة.
+            </p>
+        </div>
+
+        <div class="carousel-container" id="carousel">
+            <div class="carousel-track" id="track">
+
+                <div class="twsaa-card">
+                    <div class="card-icon">👨‍💼</div>
+                    <h3 class="card-title">مسوق</h3>
+                    <div class="card-divider"></div>
+                    <div class="comparison-label">مع توسع، الذكاء الاصطناعي يقوم بـ:</div>
+                    <ul class="features-list">
+                        <li>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            إنشاء وإدارة الحملات تلقائياً
+                        </li>
+                        <li>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            تحسين ميزانية الإعلانات بذكاء
+                        </li>
+                        <li>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            استهداف العملاء بدقة عالية
+                        </li>
+                    </ul>
+                    <div class="savings-badge">
+                        <span>وفر حتى $1200 / شهرياً</span>
+                    </div>
+                </div>
+
+                <div class="twsaa-card">
+                    <div class="card-icon">👩‍💻</div>
+                    <h3 class="card-title">كاتب محتوى</h3>
+                    <div class="card-divider"></div>
+                    <div class="comparison-label">مع توسع، الذكاء الاصطناعي يقوم بـ:</div>
+                    <ul class="features-list">
+                        <li>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            توليد وصف جذاب للمنتجات
+                        </li>
+                        <li>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            كتابة مقالات مدونة متوافقة مع SEO
+                        </li>
+                        <li>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            صياغة نصوص إعلانية بيعية
+                        </li>
+                    </ul>
+                    <div class="savings-badge">
+                        <span>وفر حتى $800 / شهرياً</span>
+                    </div>
+                </div>
+
+                <div class="twsaa-card">
+                    <div class="card-icon">🎧</div>
+                    <h3 class="card-title">خدمة عملاء</h3>
+                    <div class="card-divider"></div>
+                    <div class="comparison-label">مع توسع، الذكاء الاصطناعي يقوم بـ:</div>
+                    <ul class="features-list">
+                        <li>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            رد آلي فوري على استفسارات العملاء
+                        </li>
+                        <li>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            دعم متواصل على مدار الساعة 24/7
+                        </li>
+                        <li>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            حل المشاكل الشائعة بذكاء
+                        </li>
+                    </ul>
+                    <div class="savings-badge">
+                        <span>وفر حتى $1500 / شهرياً</span>
+                    </div>
+                </div>
+
+                <div class="twsaa-card">
+                    <div class="card-icon">📊</div>
+                    <h3 class="card-title">محلل بيانات</h3>
+                    <div class="card-divider"></div>
+                    <div class="comparison-label">مع توسع، الذكاء الاصطناعي يقوم بـ:</div>
+                    <ul class="features-list">
+                        <li>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            تقارير وتحليلات لحظية للمبيعات
+                        </li>
+                        <li>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            تحليل سلوكيات العملاء بدقة
+                        </li>
+                        <li>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            اكتشاف الفرص وتقليل التكاليف التشغيلية
+                        </li>
+                    </ul>
+                    <div class="savings-badge">
+                        <span>وفر حتى $1000 / شهرياً</span>
+                    </div>
+                </div>
+
+                <div class="twsaa-card">
+                    <div class="card-icon">📱</div>
+                    <h3 class="card-title">مدير حسابات التواصل</h3>
+                    <div class="card-divider"></div>
+                    <div class="comparison-label">مع توسع، الذكاء الاصطناعي يقوم بـ:</div>
+                    <ul class="features-list">
+                        <li>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            جدولة ونشر المحتوى تلقائياً
+                        </li>
+                        <li>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            التفاعل الآلي مع التعليقات والرسائل
+                        </li>
+                        <li>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            أتمتة المهام اليومية المتكررة
+                        </li>
+                    </ul>
+                    <div class="savings-badge">
+                        <span>وفر حتى $700 / شهرياً</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const track = document.getElementById('track');
+            const container = document.getElementById('carousel');
+
+            // Clone cards for infinite loop
+            const cards = Array.from(track.children);
+            cards.forEach(card => {
+                const clone = card.cloneNode(true);
+                track.appendChild(clone);
+            });
+            // Double clone to ensure smooth wrapping on very wide screens
+            cards.forEach(card => {
+                const clone = card.cloneNode(true);
+                track.appendChild(clone);
+            });
+
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+            let position = 0;
+            let isHovered = false;
+            let animationId;
+            const speed = 1; // Pixels per frame (adjust for speed)
+
+            // Auto-scroll function using requestAnimationFrame for 60fps smoothness
+            function autoScroll() {
+                if (!isDown && !isHovered) {
+                    position += speed; // Using += because it's RTL (scrolling left to right visually)
+
+                    // Reset position when reaching the end of original set
+                    // We calculate half the track width because we cloned it twice
+                    const maxScroll = track.scrollWidth / 3;
+
+                    if (position >= maxScroll) {
+                        position = 0;
+                    }
+
+                    track.style.transform = `translateX(${position}px)`;
+                }
+                animationId = requestAnimationFrame(autoScroll);
+            }
+
+            // Start animation
+            autoScroll();
+
+            // Pause on Hover
+            container.addEventListener('mouseenter', () => isHovered = true);
+            container.addEventListener('mouseleave', () => {
+                isHovered = false;
+                if (!isDown) isDown = false; // Safety reset
+            });
+
+            // Drag / Swipe Events
+            const startDrag = (e) => {
+                isDown = true;
+                isHovered = true; // Pause auto-scroll
+                container.style.cursor = 'grabbing';
+                // Handle touch or mouse
+                startX = (e.pageX || e.touches[0].pageX) - position;
+            };
+
+            const endDrag = () => {
+                isDown = false;
+                isHovered = false;
+                container.style.cursor = 'grab';
+            };
+
+            const drag = (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = (e.pageX || e.touches[0].pageX);
+                position = -(x - startX); // Reverse for RTL logic
+
+                // Keep within boundaries to avoid dragging into empty space
+                const maxScroll = track.scrollWidth / 3;
+                if (position < 0) position = maxScroll;
+                if (position > maxScroll) position = 0;
+
+                track.style.transform = `translateX(${position}px)`;
+            };
+
+            // Mouse Events
+            container.addEventListener('mousedown', startDrag);
+            window.addEventListener('mouseup', endDrag);
+            container.addEventListener('mousemove', drag);
+
+            // Touch Events
+            container.addEventListener('touchstart', startDrag);
+            window.addEventListener('touchend', endDrag);
+            container.addEventListener('touchmove', drag);
+        });
+    </script>
+
+
+
+    <!-- Section 13 - Automation -->
+    <section class="py-24 bg-[#F8FAFC] overflow-hidden">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+                <!-- Content -->
+
+                <div>
+
+                    <span
+                        class="inline-flex items-center px-4 py-2 rounded-full bg-[#B1C8D8]/40 text-[#010658] font-semibold mb-6">
+
+                        <i class="fa-solid fa-bolt ml-2"></i>
+                        أتمتة ذكية
+
+                    </span>
+
+                    <h2 class="text-4xl md:text-5xl font-black text-[#010658] leading-tight mb-6">
+
+                        أتمتة المهام اليومية
+
+                    </h2>
+
+                    <p class="text-lg text-gray-600 leading-9 mb-10">
+
+                        دع توسع تنجز الأعمال المتكررة تلقائياً، لتتفرغ لنمو متجرك واتخاذ القرارات المهمة.
+
+                    </p>
+
+                    <div class="grid sm:grid-cols-2 gap-4">
+
+                        <div class="flex items-center gap-4 bg-white rounded-2xl p-5 shadow-sm">
+
+                            <div class="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center">
+
+                                <i class="fa-solid fa-bullhorn text-[#010658]"></i>
+
+                            </div>
+
+                            <span class="font-bold">
+                                التسويق
+                            </span>
+
+                        </div>
+
+                        <div class="flex items-center gap-4 bg-white rounded-2xl p-5 shadow-sm">
+
+                            <div class="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center">
+
+                                <i class="fa-solid fa-comments text-green-600"></i>
+
+                            </div>
+
+                            <span class="font-bold">
+                                الردود
+                            </span>
+
+                        </div>
+
+                        <div class="flex items-center gap-4 bg-white rounded-2xl p-5 shadow-sm">
+
+                            <div class="w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center">
+
+                                <i class="fa-solid fa-calendar-days text-orange-500"></i>
+
+                            </div>
+
+                            <span class="font-bold">
+                                الجدولة
+                            </span>
+
+                        </div>
+
+                        <div class="flex items-center gap-4 bg-white rounded-2xl p-5 shadow-sm">
+
+                            <div class="w-12 h-12 rounded-xl bg-purple-100 flex items-center justify-center">
+
+                                <i class="fa-solid fa-users text-purple-600"></i>
+
+                            </div>
+
+                            <span class="font-bold">
+                                متابعة العملاء
+                            </span>
+
+                        </div>
+
+                        <div class="sm:col-span-2 flex items-center gap-4 bg-white rounded-2xl p-5 shadow-sm">
+
+                            <div class="w-12 h-12 rounded-xl bg-cyan-100 flex items-center justify-center">
+
+                                <i class="fa-solid fa-money-bill-transfer text-cyan-600"></i>
+
+                            </div>
+
+                            <span class="font-bold">
+                                التحويلات
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Widget -->
+
+                <div>
+
+                    <div
+                        class="rounded-[34px] bg-gradient-to-br from-[#010658] to-[#2336D8] p-8 shadow-[0_35px_90px_rgba(1,6,88,.18)]">
+
+                        <div class="bg-white rounded-[28px] p-8">
+
+                            <div class="flex justify-between items-center mb-10">
+
+                                <h3 class="font-black text-xl text-[#010658]">
+
+                                    Automation Flow
+
+                                </h3>
+
+                                <span class="px-4 py-2 rounded-full bg-green-100 text-green-700 text-sm font-bold">
+
+                                    يعمل الآن
+
+                                </span>
+
+                            </div>
+
+                            <div class="space-y-7">
+
+                                <div class="flex items-center gap-4">
+
+                                    <div class="w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center">
+
+                                        <i class="fa-solid fa-bullhorn text-[#010658]"></i>
+
+                                    </div>
+
+                                    <div class="flex-1">
+
+                                        <div class="font-bold">
+
+                                            إنشاء حملة
+
+                                        </div>
+
+                                        <div class="h-2 rounded-full bg-gray-200 mt-2 overflow-hidden">
+
+                                            <div class="w-full h-full bg-[#010658] animate-pulse"></div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <i class="fa-solid fa-circle-check text-green-500 text-xl"></i>
+
+                                </div>
+
+                                <div class="flex justify-center">
+
+                                    <i class="fa-solid fa-arrow-down text-gray-400"></i>
+
+                                </div>
+
+                                <div class="flex items-center gap-4">
+
+                                    <div class="w-14 h-14 rounded-2xl bg-orange-100 flex items-center justify-center">
+
+                                        <i class="fa-solid fa-calendar-days text-orange-500"></i>
+
+                                    </div>
+
+                                    <div class="flex-1">
+
+                                        <div class="font-bold">
+
+                                            جدولة النشر
+
+                                        </div>
+
+                                    </div>
+
+                                    <i class="fa-solid fa-circle-check text-green-500"></i>
+
+                                </div>
+
+                                <div class="flex justify-center">
+
+                                    <i class="fa-solid fa-arrow-down text-gray-400"></i>
+
+                                </div>
+
+                                <div class="flex items-center gap-4">
+
+                                    <div class="w-14 h-14 rounded-2xl bg-green-100 flex items-center justify-center">
+
+                                        <i class="fa-solid fa-comments text-green-600"></i>
+
+                                    </div>
+
+                                    <div class="flex-1">
+
+                                        <div class="font-bold">
+
+                                            الرد على العملاء
+
+                                        </div>
+
+                                    </div>
+
+                                    <i class="fa-solid fa-circle-check text-green-500"></i>
+
+                                </div>
+
+                                <div class="flex justify-center">
+
+                                    <i class="fa-solid fa-arrow-down text-gray-400"></i>
+
+                                </div>
+
+                                <div class="flex items-center gap-4">
+
+                                    <div class="w-14 h-14 rounded-2xl bg-cyan-100 flex items-center justify-center">
+
+                                        <i class="fa-solid fa-money-bill-transfer text-cyan-600"></i>
+
+                                    </div>
+
+                                    <div class="flex-1">
+
+                                        <div class="font-bold">
+
+                                            تحويل الأرباح
+
+                                        </div>
+
+                                    </div>
+
+                                    <i class="fa-solid fa-circle-check text-green-500"></i>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Why Twsaa -->
+    <section class="py-24 bg-[#F2F2F2] overflow-hidden">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="rounded-[40px] bg-white shadow-[0_30px_80px_rgba(1,6,88,.08)] overflow-hidden">
+
+                <div class="grid lg:grid-cols-2 items-center">
+
+                    <!-- Content -->
+
+                    <div class="p-8 md:p-14">
+
+                        <span
+                            class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#B1C8D8]/40 text-[#010658] font-bold mb-6">
+
+                            <i class="fa-solid fa-star"></i>
+
+                            لماذا توسع؟
+
+                        </span>
+
+                        <h2 class="text-4xl md:text-5xl font-black text-[#010658] leading-tight mb-6">
+
+                            منصة واحدة للنمو والتشغيل
+
+                        </h2>
+
+                        <p class="text-lg text-gray-600 leading-9 mb-10">
+
+                            مناسبة للمتاجر الصغيرة والمتوسطة وتساعدك على
+                            التوسع باحترافية دون تعقيد.
+
+                        </p>
+
+                        <div class="grid sm:grid-cols-2 gap-4">
+
+                            <div class="flex items-center gap-3 bg-[#F8FAFC] rounded-2xl p-4">
+
+                                <i class="fa-solid fa-bullhorn text-[#010658]"></i>
+
+                                <span class="font-bold">التسويق</span>
+
+                            </div>
+
+                            <div class="flex items-center gap-3 bg-[#F8FAFC] rounded-2xl p-4">
+
+                                <i class="fa-solid fa-pen-nib text-[#010658]"></i>
+
+                                <span class="font-bold">المحتوى</span>
+
+                            </div>
+
+                            <div class="flex items-center gap-3 bg-[#F8FAFC] rounded-2xl p-4">
+
+                                <i class="fa-solid fa-headset text-[#010658]"></i>
+
+                                <span class="font-bold">خدمة العملاء</span>
+
+                            </div>
+
+                            <div class="flex items-center gap-3 bg-[#F8FAFC] rounded-2xl p-4">
+
+                                <i class="fa-solid fa-chart-line text-[#010658]"></i>
+
+                                <span class="font-bold">التحليلات</span>
+
+                            </div>
+
+                            <div class="flex items-center gap-3 bg-[#F8FAFC] rounded-2xl p-4">
+
+                                <i class="fa-solid fa-wand-magic-sparkles text-[#010658]"></i>
+
+                                <span class="font-bold">الذكاء الاصطناعي</span>
+
+                            </div>
+
+                            <div class="flex items-center gap-3 bg-[#F8FAFC] rounded-2xl p-4">
+
+                                <i class="fa-solid fa-warehouse text-[#010658]"></i>
+
+                                <span class="font-bold">المخازن</span>
+
+                            </div>
+
+                            <div class="sm:col-span-2 flex items-center gap-3 bg-[#F8FAFC] rounded-2xl p-4">
+
+                                <i class="fa-solid fa-money-bill-transfer text-[#010658]"></i>
+
+                                <span class="font-bold">التحويلات</span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Widget -->
+
+                    <div class="bg-gradient-to-br from-[#010658] to-[#2436D8] p-8 md:p-14 flex justify-center">
+
+                        <div class="bg-white rounded-[34px] p-8 w-full max-w-md shadow-2xl">
+
+                            <div
+                                class="w-20 h-20 mx-auto rounded-full bg-[#010658] flex items-center justify-center text-white text-3xl mb-8">
+
+                                <i class="fa-solid fa-layer-group"></i>
+
+                            </div>
+
+                            <h3 class="text-center text-2xl font-black text-[#010658] mb-8">
+
+                                Twsaa Platform
+
+                            </h3>
+
+                            <div class="space-y-4">
+
+                                <div class="flex justify-between items-center bg-[#F2F2F2] rounded-xl p-4">
+
+                                    <span>التسويق</span>
+
+                                    <i class="fa-solid fa-check text-green-500"></i>
+
+                                </div>
+
+                                <div class="flex justify-between items-center bg-[#F2F2F2] rounded-xl p-4">
+
+                                    <span>المحتوى</span>
+
+                                    <i class="fa-solid fa-check text-green-500"></i>
+
+                                </div>
+
+                                <div class="flex justify-between items-center bg-[#F2F2F2] rounded-xl p-4">
+
+                                    <span>خدمة العملاء</span>
+
+                                    <i class="fa-solid fa-check text-green-500"></i>
+
+                                </div>
+
+                                <div class="flex justify-between items-center bg-[#F2F2F2] rounded-xl p-4">
+
+                                    <span>الذكاء الاصطناعي</span>
+
+                                    <i class="fa-solid fa-check text-green-500"></i>
+
+                                </div>
+
+                                <div class="flex justify-between items-center bg-[#F2F2F2] rounded-xl p-4">
+
+                                    <span>المخازن والتحويلات</span>
+
+                                    <i class="fa-solid fa-check text-green-500"></i>
+
+                                </div>
+
+                            </div>
+
+                            <div class="mt-8 rounded-2xl bg-[#010658] text-white text-center py-4 font-bold">
+
+                                كل أدوات متجرك... في مكان واحد
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer class="bg-[#010658] text-white pt-24">
+
+        <!-- CTA -->
+
+        <div class="max-w-6xl mx-auto px-6">
+
+            <div class="bg-white rounded-[40px] p-10 md:p-16 text-center shadow-2xl">
+
+                <span class="inline-flex px-4 py-2 rounded-full bg-[#EEF4FF] text-[#010658] font-bold mb-6">
+
+                    🚀 ابدأ اليوم
+
+                </span>
+
+                <h2 class="text-4xl md:text-5xl font-black text-[#010658] leading-tight">
+
+                    مستقبل التجارة الإلكترونية
+                    <br>
+                    يبدأ مع توسع
+
+                </h2>
+
+                <p class="mt-6 text-lg text-gray-600 leading-9 max-w-2xl mx-auto">
+
+                    منصة واحدة تساعدك على إدارة متجرك،
+                    إنشاء المحتوى،
+                    التسويق،
+                    خدمة العملاء،
+                    والتحليلات...
+
+                    كل ذلك في مكان واحد.
+
+                </p>
+
+                <a href="#"
+                    class="inline-flex mt-10 bg-[#010658] hover:bg-[#1625B5] text-white px-10 py-5 rounded-2xl font-bold transition">
+
+                    أنشئ متجرك الآن
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Footer -->
+
+        <div class="max-w-7xl mx-auto px-6 py-20">
+
+            <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-14">
+
+                <!-- Logo -->
+
+                <div>
+
+                    <img src="https://twsaa.com/images/new_frontend/new-logo.png" class="h-16 mb-6 brightness-0 invert">
+                    <p class="text-blue-100 leading-8">
+
+                        منصة سعودية تساعد المتاجر
+                        على النمو وإدارة أعمالها
+                        بالذكاء الاصطناعي.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- Company -->
+
+                <div>
+
+                    <h3 class="font-bold text-xl mb-6">
+
+                        الشركة
+
+                    </h3>
+
+                    <ul class="space-y-4 text-blue-100">
+
+                        <li><a href="#">عن توسع</a></li>
+
+                        <li><a href="#">الخدمات</a></li>
+
+                        <li><a href="#">الباقات</a></li>
+
+                        <li><a href="#">المدونة</a></li>
+
+                    </ul>
+
+                </div>
+
+
+
+                <!-- Support -->
+
+                <div>
+
+                    <h3 class="font-bold text-xl mb-6">
+
+                        الدعم
+
+                    </h3>
+
+                    <ul class="space-y-4 text-blue-100">
+
+                        <li><a href="#">الأسئلة الشائعة</a></li>
+
+                        <li><a href="#">سياسة الخصوصية</a></li>
+
+                        <li><a href="#">الشروط والأحكام</a></li>
+
+                        <li><a href="#">نظام الشكاوى</a></li>
+
+                    </ul>
+
+                </div>
+
+
+
+                <!-- Contact -->
+
+                <div>
+
+                    <h3 class="font-bold text-xl mb-6">
+
+                        تواصل معنا
+
+                    </h3>
+
+                    <div class="flex flex-wrap gap-3">
+
+                        <a href="#"
+                            class="w-12 h-12 rounded-xl bg-white/10 hover:bg-white hover:text-[#010658] transition flex items-center justify-center">
+
+                            <i class="fab fa-facebook-f"></i>
+
+                        </a>
+
+                        <a href="#"
+                            class="w-12 h-12 rounded-xl bg-white/10 hover:bg-white hover:text-[#010658] transition flex items-center justify-center">
+
+                            <i class="fab fa-instagram"></i>
+
+                        </a>
+
+                        <a href="#"
+                            class="w-12 h-12 rounded-xl bg-white/10 hover:bg-white hover:text-[#010658] transition flex items-center justify-center">
+
+                            <i class="fab fa-x-twitter"></i>
+
+                        </a>
+
+                        <a href="#"
+                            class="w-12 h-12 rounded-xl bg-white/10 hover:bg-white hover:text-[#010658] transition flex items-center justify-center">
+
+                            <i class="fab fa-youtube"></i>
+
+                        </a>
+
+                        <a href="#"
+                            class="w-12 h-12 rounded-xl bg-white/10 hover:bg-white hover:text-[#010658] transition flex items-center justify-center">
+
+                            <i class="fab fa-whatsapp"></i>
+
+                        </a>
+
+                    </div>
+
+
+
+                    <div class="mt-8 flex gap-3 flex-wrap">
+
+                        <img src="https://twsaa.com/images/new_frontend/apple.png" class="h-12 rounded-xl">
+
+                        <img src="https://twsaa.com/images/new_frontend/google.png" class="h-12 rounded-xl">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Bottom -->
+
+            <div
+                class="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-5">
+
+                <p class="text-blue-200 text-center md:text-right">
+
+                    © 2026 Twsaa. جميع الحقوق محفوظة.
+
+                </p>
+
+                <div class="flex flex-wrap gap-6 text-blue-200">
+
+                    <a href="#">عن توسع</a>
+
+                    <a href="#">الخدمات</a>
+
+                    <a href="#">الباقات</a>
+
+                    <a href="#">الخصوصية</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
